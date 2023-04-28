@@ -11,3 +11,20 @@ Vanliga tärningar
 DnD spells
 Custom tärningar
 
+Utförande:
+Jag planerar att använda Math.random för den slumpmässiga aspekten.
+
+För custom tärningarna:
+slots
+Val:
+Sidor
+Hur många
+
+
+DND tärningar:
+Endast custom slots:
+Döpa
+Sidor
+Hur många
+Modifier
+Annat att lägga till
