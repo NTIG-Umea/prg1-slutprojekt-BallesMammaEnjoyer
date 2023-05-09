@@ -18,6 +18,8 @@ public class GUI {
     private JButton d10Button;
     private JButton d100Button;
 
+    public JFrame frame;
+
     public GUI() {
         button4.addActionListener(new ActionListener() {
             @Override
@@ -85,11 +87,20 @@ public class GUI {
                 textArea1.setText("You rolled a " + roll + "!");
             }
         });
+        button3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                version2 v2 = new version2();
+                frame.setContentPane(v2.version2Panel);
+                frame.setVisible(true);
+            }
+        });
     }
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("GUI");
         GUI gui = new GUI();
+        gui.frame = frame;
         frame.setContentPane(gui.panel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         gui.panel.setPreferredSize(new Dimension(350,350));
