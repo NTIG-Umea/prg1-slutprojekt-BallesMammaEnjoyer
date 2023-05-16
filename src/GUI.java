@@ -17,6 +17,7 @@ public class GUI {
     private JButton d20Button;
     private JButton d10Button;
     private JButton d100Button;
+    private JPanel version2Panel;
 
     public JFrame frame;
 
@@ -93,6 +94,12 @@ public class GUI {
                 version2 v2 = new version2();
                 frame.setContentPane(v2.version2Panel);
                 frame.setVisible(true);
+            }
+        });
+        button3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
             }
         });
     }
