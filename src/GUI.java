@@ -4,9 +4,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class GUI {
-    private JPanel panel;
-    private JButton button1;
-    private JButton button2;
+    public JPanel panel;
+    private JButton diceButton;
+    private JButton dnDButton;
     private JButton button3;
     private JTextArea textArea1;
     private JButton button4;
@@ -26,7 +26,7 @@ public class GUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 int h = 2;
-                int roll = (int)(Math.random() * (h)+1);
+                int roll = (int) (Math.random() * (h) + 1);
                 textArea1.setText("You rolled a " + roll + "!");
 
             }
@@ -36,7 +36,7 @@ public class GUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 int h = 4;
-                int roll = (int)(Math.random() * (h)+1);
+                int roll = (int) (Math.random() * (h) + 1);
                 textArea1.setText("You rolled a " + roll + "!");
             }
         });
@@ -44,7 +44,7 @@ public class GUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 int h = 6;
-                int roll = (int)(Math.random() * (h)+1);
+                int roll = (int) (Math.random() * (h) + 1);
                 textArea1.setText("You rolled a " + roll + "!");
             }
         });
@@ -52,7 +52,7 @@ public class GUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 int h = 8;
-                int roll = (int)(Math.random() * (h)+1);
+                int roll = (int) (Math.random() * (h) + 1);
                 textArea1.setText("You rolled a " + roll + "!");
             }
         });
@@ -60,7 +60,7 @@ public class GUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 int h = 10;
-                int roll = (int)(Math.random() * (h)+1);
+                int roll = (int) (Math.random() * (h) + 1);
                 textArea1.setText("You rolled a " + roll + "!");
             }
         });
@@ -68,7 +68,7 @@ public class GUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 int h = 12;
-                int roll = (int)(Math.random() * (h)+1);
+                int roll = (int) (Math.random() * (h) + 1);
                 textArea1.setText("You rolled a " + roll + "!");
             }
         });
@@ -76,7 +76,7 @@ public class GUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 int h = 20;
-                int roll = (int)(Math.random() * (h)+1);
+                int roll = (int) (Math.random() * (h) + 1);
                 textArea1.setText("You rolled a " + roll + "!");
             }
         });
@@ -84,7 +84,7 @@ public class GUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 int h = 100;
-                int roll = (int)(Math.random() * (h)+1);
+                int roll = (int) (Math.random() * (h) + 1);
                 textArea1.setText("You rolled a " + roll + "!");
             }
         });
@@ -92,6 +92,7 @@ public class GUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 version2 v2 = new version2();
+                v2.frame = frame;
                 frame.setContentPane(v2.version2Panel);
                 frame.setVisible(true);
             }
@@ -104,21 +105,21 @@ public class GUI {
         });
     }
 
-    public static void main(String[] args) {
-        JFrame frame = new JFrame("GUI");
-        GUI gui = new GUI();
-        gui.frame = frame;
-        frame.setContentPane(gui.panel);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        gui.panel.setPreferredSize(new Dimension(350,350));
-        Font font1 = new Font ("Sans Seriff", Font.BOLD, 18);
-        gui.textArea1.setFont(font1);
-        frame.pack();
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
-    }
 
-    private void createUIComponents() {
-        // TODO: place custom component creation code here
-    }
+     public static void main(String[] args) {
+            JFrame frame = new JFrame("GUI");
+            GUI gui = new GUI();
+            gui.frame = frame;
+            frame.setContentPane(gui.panel);
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            gui.panel.setPreferredSize(new Dimension(350,350));
+            Font font1 = new Font ("Sans Seriff", Font.BOLD, 18);
+            gui.textArea1.setFont(font1);
+            frame.pack();
+            frame.setLocationRelativeTo(null);
+            frame.setVisible(true);
+        }
+
+
+
 }
